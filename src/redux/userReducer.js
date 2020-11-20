@@ -1,11 +1,9 @@
-const LOAD_USERS = 'LOAD_USERS';
+const LOAD_USERS = 'users/LOAD_USERS';
 
 export const loadUsers = (users) => ({
   type: LOAD_USERS,
   payload: users,
 });
-
-export const getUsers = (state) => state;
 
 export const userReducer = (users = [], action) => {
   switch (action.type) {
