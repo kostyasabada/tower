@@ -1,10 +1,18 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import { getUsers } from './api/getUsers';
+import { useDispatch, useSelector } from 'react-redux';
+import { getUsersFromServer } from './api/getUsers';
+import { getUsers, loadUsers } from './redux/userReducer';
 
 function App() {
+  const dispatch = useDispatch();
+
+  const users = useSelector(getUsers);
+  console.log((users));
+
   useEffect(() => {
-    getUsers();
+    getUsersFromServer()
+      .then((res) => dispatch(loadUsers(res)));
   }, []);
 
   return (
