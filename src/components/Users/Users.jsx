@@ -11,10 +11,10 @@ export const Users = () => {
   // const currentPage = useRouteMatch();
   // const location = useLocation();
   const { currentPage } = useParams();
-  console.log(usersPerPage, currentPage, currentPage);
+  // console.log(usersPerPage, currentPage, currentPage);
   const currentUsers = users
-    .slice(usersPerPage * currentPage - usersPerPage, usersPerPage * currentPage)
-  console.log((currentUsers));
+    .slice(usersPerPage * currentPage - usersPerPage, usersPerPage * currentPage);
+  // console.log((currentUsers));
 
   return (
     <ul>

@@ -1,3 +1,11 @@
 .App {
   text-align: center;
 }
+
+.section {
+  display: flex;
+}
+
+.randomname {
+  width: 20%;
+}
