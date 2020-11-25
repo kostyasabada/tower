@@ -6,10 +6,7 @@ export const User = ({ user }) => {
   const { name, surname, desc } = user;
   return (
     <div className="user">
-      <div className="user__title">
-        <p>{name}</p>
-        <p>{surname}</p>
-      </div>
+      <p>{`${name} ${surname}`}</p>
       <p>{desc}</p>
     </div>
   );

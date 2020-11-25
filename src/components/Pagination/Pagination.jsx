@@ -1,12 +1,10 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { setCurrentPage } from '../../redux/currentPageReducer';
 import { getUsers, getUsersPerPage } from '../../redux/rootReducer';
 import './Pagination.scss';
 
 export const Pagination = () => {
-  const dispatch = useDispatch();
   const users = useSelector(getUsers);
   const usersPerPage = useSelector(getUsersPerPage);
   const pages = [];
@@ -14,18 +12,18 @@ export const Pagination = () => {
     pages.push(i);
   }
 
-  const handlePage = (page) => {
-    dispatch(setCurrentPage(page));
-  };
-
   return (
     <nav>
       <ul className="nav__list">
         {pages.map((page) => (
-          <li className="nav__item">
+          <li
+            className="nav__item"
+            key={page}
+          >
             <NavLink
+              className="nav__link"
+              activeClassName="nav__link_is-active"
               to={`/users/${page}`}
-              onClick={() => handlePage(page)}
             >
               {page}
             </NavLink>

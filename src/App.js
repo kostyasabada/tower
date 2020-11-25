@@ -30,7 +30,9 @@ function App() {
             to="/users/1"
           />
         </Switch>
-        <div className="randomname"><RandomName /></div>
+        <div className="randomname">
+          <RandomName />
+        </div>
       </section>
 
       <Pagination />
