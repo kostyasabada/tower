@@ -1,0 +1,12 @@
+.nav {
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    list-style: none;
+    width: 30px;
+    height: 30px;
+  }
+}
