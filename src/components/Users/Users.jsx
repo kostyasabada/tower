@@ -3,6 +3,7 @@ import './Users.scss';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getUsers, getUsersPerPage } from '../../redux/rootReducer';
+
 import { User } from '../User/User';
 
 export const Users = () => {
